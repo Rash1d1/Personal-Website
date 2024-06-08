@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var projectList = document.getElementById('project-list');
+    let projectList = document.getElementById('project-list');
 
-    var projects = [
+    let projects = [
         {
             name: 'Online calculator application',
             description: 'Pet project to dive into HTML, CSS and JavaScript',
@@ -19,38 +19,47 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
-    for (var i = 0; i < projects.length; i++) {
-        var project = projects[i];
+    for (let i = 0; i < projects.length; i++) {
+        let project = projects[i];
 
-        var projectItem = document.createElement('li');
+        let projectItem = document.createElement('li');
         projectItem.className = 'project-item';
 
-        var projectHeader = document.createElement('button');
+        let projectHeader = document.createElement('button');
         projectHeader.className = 'project-header';
         projectHeader.type = 'button';
         projectHeader.textContent = project.name;
 
-        var projectContent = document.createElement('div');
+        let projectContent = document.createElement('div');
         projectContent.className = 'project-content';
 
-        var projectDescription = document.createElement('p');
+        let projectDescription = document.createElement('p');
         projectDescription.textContent = project.description;
 
-        var projectLink = document.createElement('a');
+        let projectLink = document.createElement('a');
         projectLink.href = project.link;
         projectLink.textContent = 'View Project';
 
         projectContent.appendChild(projectDescription);
         projectContent.appendChild(projectLink);
+        projectContent.style.maxHeight = "none";
+        projectList.appendChild(projectHeader);
+        // projectItem.appendChild(projectContent);
 
-        projectItem.appendChild(projectHeader);
-        projectItem.appendChild(projectContent);
-
-        projectList.appendChild(projectItem);
+        projectList.appendChild(projectContent);
+        console.log(projectContent.style.maxHeight);
 
         projectHeader.addEventListener('click', function() {
-            var projectContent = this.nextElementSibling;
-            projectContent.style.display = projectContent.style.display === 'block' ? 'none' : 'block';
+            this.classList.toggle("active");
+            let projectContent = this.nextElementSibling;
+            if (projectContent.style.maxHeight !== "none") {
+                projectContent.style.maxHeight = "none";
+                projectContent.style.display = "none"
+            } else {
+                projectContent.style.display = "block"
+                projectContent.style.maxHeight = projectContent.scrollHeight + 'px';
+            }
         });
+
     }
 });

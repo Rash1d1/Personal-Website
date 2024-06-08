@@ -93,14 +93,13 @@ header {
 }
 
 .bio p {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.5;
     color: #34495e;
 }
 
 .projects {
     background: linear-gradient(135deg, #A23A2C 0%, #C46655 100%);
-    border-bottom: 1px solid #e0e0e0;
     padding: 3px 20px;
     width: 100%;
     border-radius: 30px;
@@ -115,28 +114,34 @@ ul {
     padding: 20px 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
-    transition: background-color 0.3s;
+    transition: 0.9s;
     color: #000000;
     font-weight: 500;
-    margin-bottom: 10px;
-    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 22px;
+    border: none;
 }
-
 .project-header:hover {
-    background-color: #F8EFF2;
+    background-color: #E1C5C1;
+}
+.active {
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 5px;
+    background-color: #E1C5C1;
 }
 
 
 .project-content {
     padding: 20px 20px;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin-bottom: 15px;
     background-color: #f9f9f9;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, max-height 0.9s ease-out;
     color: #000000;
     font-weight: 500;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     display: none;
+    max-height: 0;
+    margin-top: 0;
     font-size: 16px;
     line-height: 1.5;
 }

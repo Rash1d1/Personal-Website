@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             name: 'Avito parser',
-            description: 'Online Avito parser, focused on gathering info about vacancies. Support asynchrony. Stack used: Python, FastAPI, HTML5, BootStrap, JavaScript, ',
+            description: 'Online Avito parser, focused on gathering info about vacancies. Support asynchrony. Stack used: Python, FastAPI, HTML5, BootStrap, JavaScript.    ',
             link: 'https://github.com/Rash1d1/avito-parser-vacancy'
         }
     ];
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         projectHeader.className = 'project-header';
         projectHeader.type = 'button';
         projectHeader.textContent = project.name;
-
+        if (i === projects.length - 1) { projectHeader.style.marginBottom = "10px"}
         let projectContent = document.createElement('div');
         projectContent.className = 'project-content';
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         projectContent.appendChild(projectDescription);
         projectContent.appendChild(projectLink);
-        projectContent.style.maxHeight = "none";
+        projectContent.style.overflow = 'hidden';
         projectList.appendChild(projectHeader);
         // projectItem.appendChild(projectContent);
 
@@ -52,12 +52,14 @@ document.addEventListener('DOMContentLoaded', function() {
         projectHeader.addEventListener('click', function() {
             this.classList.toggle("active");
             let projectContent = this.nextElementSibling;
-            if (projectContent.style.maxHeight !== "none") {
-                projectContent.style.maxHeight = "none";
-                projectContent.style.display = "none"
+            if (projectContent.style.maxHeight) {
+                projectContent.style.maxHeight = null;
+                projectContent.style.marginBottom = null;
+                projectContent.style.padding= null;
             } else {
-                projectContent.style.display = "block"
                 projectContent.style.maxHeight = projectContent.scrollHeight + 'px';
+                projectContent.style.marginBottom = '15px';
+                projectContent.style.padding = "20px 20px"
             }
         });
 

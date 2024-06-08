@@ -104,6 +104,7 @@ header {
     width: 100%;
     border-radius: 30px;
     margin: 15px 0;
+
 }
 
 ul {
@@ -114,12 +115,15 @@ ul {
     padding: 20px 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
-    transition: 0.9s;
+    transition: 0.4s;
     color: #000000;
     font-weight: 500;
     margin-bottom: 5px;
     font-size: 22px;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .project-header:hover {
     background-color: #E1C5C1;
@@ -132,19 +136,19 @@ ul {
 
 
 .project-content {
-    padding: 20px 20px;
-    margin-bottom: 15px;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
     background-color: #f9f9f9;
-    transition: background-color 0.3s, max-height 0.9s ease-out;
+    transition: background-color 0.3s, max-height 0.4s ease-out, padding 0.9s ease-out, margin 0.9s ease-out;
     color: #000000;
     font-weight: 500;
     border-radius: 0 0 10px 10px;
-    display: none;
-    max-height: 0;
-    margin-top: 0;
+    overflow: hidden;
     font-size: 16px;
     line-height: 1.5;
 }
+
 
 
 .projects h2 {

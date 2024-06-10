@@ -1,24 +1,15 @@
-@font-face {
-    font-family: 'Segoe UI';
-    src: url("Segoe UI/Segoe-Regular.ttf");
-}
-
-@font-face {
-    font-family: 'Segoe UI';
-    src: url("Segoe UI/Segoe UI Bold.ttf");
-}
-
-p, h1, h2, h3, button {
-    font-family: "Segoe-Regular", sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    padding: 20px 200px;
+    padding: 20px 100px;
     background-color: #f3f3f3;
     /*background-image: url('photos/background-image.png');*/
     background-size: cover;
+    font-family: 'Roboto', sans-serif;
 }
-
+button, a, p, h2, h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
 header {
     display: flex;
     flex-direction: column;
@@ -29,16 +20,18 @@ header {
     color: #fff;
     width: 100%;
     border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .name {
     align-items: center;
     width: 100%;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .name p {
-    font-family: "Segoe UI Bold", sans-serif;
+    font-weight: 700;
     font-size: 40px;
 }
 
@@ -57,13 +50,13 @@ header {
 
 .social-links p {
     margin-right: 10px;
-    font-size: 18px;
+    font-size: 20px;
     color: #fff;
 }
 
 .social-links a {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     margin-left: 10px;
     border-radius: 30px;
     display: flex;
@@ -80,9 +73,9 @@ header {
 .bio {
     display: flex;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 60px;
     background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 30px 20px;
     border-radius: 30px;
     width: 100%;
@@ -104,15 +97,16 @@ header {
 .projects {
     background: linear-gradient(135deg, #A23A2C 0%, #C46655 100%);
     padding: 3px 20px;
+    padding-bottom: 10px;
     width: 100%;
     border-radius: 30px;
     margin: 15px 0;
-
 }
 
 ul {
     list-style-type: none;
 }
+
 .project-header {
     width: 100%;
     padding: 20px 20px;
@@ -128,14 +122,15 @@ ul {
     justify-content: center;
     align-items: center;
 }
+
 .project-header:hover {
     background-color: #E1C5C1;
 }
+
 .active {
     margin-bottom: 5px;
     background-color: #E1C5C1;
 }
-
 
 .project-content {
     padding: 0;
@@ -151,8 +146,6 @@ ul {
     line-height: 1.5;
 }
 
-
-
 .projects h2 {
     margin-top: 30px;
     color: #ffffff;
@@ -160,20 +153,6 @@ ul {
     display: flex;
     align-items: center;
 }
-
-
-/*.projects li {*/
-/*    padding: 20px 20px;*/
-/*    background-color: #f9f9f9;*/
-/*    border-radius: 10px;*/
-/*    margin: 20px 0;*/
-/*    transition: background-color 0.3s;*/
-/*}*/
-
-/*.projects li:hover {*/
-/*    background-color: #F8EFF2;*/
-/*}*/
-
 
 .projects h3 {
     color: #000000;

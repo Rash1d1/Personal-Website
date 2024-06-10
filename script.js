@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         projectHeader.className = 'project-header';
         projectHeader.type = 'button';
         projectHeader.textContent = project.name;
-        if (i === projects.length - 1) { projectHeader.style.marginBottom = "10px"}
+
         let projectContent = document.createElement('div');
         projectContent.className = 'project-content';
 

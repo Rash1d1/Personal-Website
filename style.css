@@ -1,15 +1,15 @@
 @font-face {
-    font-family: 'Hamlet-Regular';
-    src: url("Hahmlet/Hahmlet-Regular.ttf");
+    font-family: 'Segoe UI';
+    src: url("Segoe UI/Segoe-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'Hamlet-Semibold';
-    src: url("Hahmlet/Hahmlet-Semibold.ttf");
+    font-family: 'Segoe UI';
+    src: url("Segoe UI/Segoe UI Bold.ttf");
 }
 
-p, h1, h2, h3 {
-    font-family: "Hamlet-Regular", sans-serif;
+p, h1, h2, h3, button {
+    font-family: "Segoe-Regular", sans-serif;
 }
 
 body {
@@ -32,10 +32,13 @@ header {
 }
 
 .name {
-    font-family: 'Hamlet-Semibold', sans-serif;
     align-items: center;
     width: 100%;
     text-align: center;
+}
+
+.name p {
+    font-family: "Segoe UI Bold", sans-serif;
     font-size: 40px;
 }
 
@@ -62,7 +65,7 @@ header {
     width: 35px;
     height: 35px;
     margin-left: 10px;
-    border-radius: 50%;
+    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +91,7 @@ header {
 .bio img {
     width: 200px;
     height: 200px;
-    border-radius: 30%;
+    border-radius: 30px;
     margin-right: 30px;
 }
 
@@ -114,7 +117,7 @@ ul {
     width: 100%;
     padding: 20px 20px;
     background-color: #f9f9f9;
-    border-radius: 10px;
+    border-radius: 20px;
     transition: 0.4s;
     color: #000000;
     font-weight: 500;
@@ -129,7 +132,6 @@ ul {
     background-color: #E1C5C1;
 }
 .active {
-    border-radius: 10px 10px 0 0;
     margin-bottom: 5px;
     background-color: #E1C5C1;
 }
@@ -143,7 +145,7 @@ ul {
     transition: background-color 0.3s, max-height 0.4s ease-out, padding 0.9s ease-out, margin 0.9s ease-out;
     color: #000000;
     font-weight: 500;
-    border-radius: 0 0 10px 10px;
+    border-radius: 20px;
     overflow: hidden;
     font-size: 16px;
     line-height: 1.5;

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     let projectList = document.getElementById('project-list');
 
     let projects = [
@@ -62,6 +62,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 projectContent.style.padding = "20px 20px"
             }
         });
-
     }
+
+    const email = 'r.badamshin@innopolis.university'; // Replace with your email
+    const response = await fetch(`https://fwd.innopolis.university/api/hw2?email=${email}`);
+    const comicId = await response.text();
+
+    // Fetch comic data
+    const comicResponse = await fetch(`https://fwd.innopolis.university/api/comic?id=${comicId}`);
+    const comicData = await comicResponse.json();
+
+    // Display comic data
+    document.getElementById('comic-img').src = comicData.img;
+    document.getElementById('comic-img').alt = comicData.alt;
+    document.getElementById('comic-title').textContent = comicData.safe_title;
+    document.getElementById('comic-date').textContent = new Date(comicData.year, comicData.month - 1, comicData.day).toLocaleDateString();
 });

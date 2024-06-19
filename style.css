@@ -37,9 +37,7 @@ header {
 
 .header-content {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+
 }
 
 .social-links {
@@ -60,8 +58,7 @@ header {
     margin-left: 10px;
     border-radius: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
     background-color: #e0e0e0;
 }
 
@@ -176,4 +173,29 @@ ul {
 
 .projects a:hover {
     color: #3068D5;
+}
+
+
+
+.comic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+    border-radius: 30px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.comic img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.comic p {
+    font-size: 20px;
+    color: #34495e;
 }
